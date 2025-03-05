@@ -25,7 +25,7 @@ Contributions are welcome! If you have a computer vision project you'd like to a
 
 ## Author
 
-[Jaya Bharath Reddy Iska]
+Jaya Bharath Reddy Iska
 
 ## License
 
