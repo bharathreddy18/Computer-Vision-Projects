@@ -64,10 +64,6 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 Jaya Bharath Reddy Iska
 
-## License
-
-[-------]
-
 ## Hashtags
 
 \#TouchlessTechnology \#HandTracking \#Codinglife \#MediaPipe \#Python \#OpenCV \#ComputerVision \#GestureControl \#ArtificialIntelligence \#AI \#MachineLearning \#ML \#DeepLearning \#NeuralNetworks \#Tech \#Technology \#Code \#Programmer \#Programming \#PythonProjects \#SoftwareDeveloper \#SoftwareEngineer \#Development \#Engineering \#RealTimeTracking \#InteractiveTech \#Innovation \#TechForGood \#DataScience \#ComputerScience \#LinkedIn \#AICommunity \#FutureofLearning
