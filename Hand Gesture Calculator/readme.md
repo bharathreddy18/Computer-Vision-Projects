@@ -8,13 +8,11 @@ This project implements a hand gesture-based calculator using OpenCV and MediaPi
 -   **Gesture-based Operator Selection:** Select mathematical operators (+, -, \*, /) with hand movements.
 -   **Real-time Calculation Display:** See the calculation results instantly on the screen.
 -   **Touchless Interaction:** Perform calculations without touching a physical keypad.
--   **Blink to save the total number inputed by hands.**
 
 ## Technologies Used
 
 -   **OpenCV:** For capturing and displaying the live video feed.
 -   **MediaPipe Hands:** For accurate and real-time hand tracking and finger counting.
--   **MediaPipe Face Mesh:** For eye blink detection.
 -   **Python:** The backbone of the application's logic.
 
 ## Prerequisites
@@ -29,8 +27,8 @@ This project implements a hand gesture-based calculator using OpenCV and MediaPi
 1.  Clone the repository:
 
     ```bash
-    git clone [repository URL]
-    cd [repository directory]
+    git clone https://github.com/bharathreddy18/Computer-Vision-Projects.git
+    cd Hand Gesture Calculator
     ```
 
 2.  Install the required libraries:
@@ -49,11 +47,10 @@ This project implements a hand gesture-based calculator using OpenCV and MediaPi
 
 2.  **Digit Input:** Raise the corresponding number of fingers within the designated input boxes.
 3.  **Operator Selection:** Point your index finger to the desired operator button.
-4.  **Confirmation:** Make a fist with your right hand to confirm the input.
+4.  **Confirmation:** Show your palm with your right hand to confirm the input.
 5.  **Evaluation:** Make fists with both hands to evaluate the expression.
-6.  **Blink:** Blink both eyes to save the total number of fingers inputed by hand.
-7.  **Reset:** Press 'r' to reset the calculator.
-8.  **Quit:** Press 'q' to quit.
+6.  **Reset:** Press 'r' to reset the calculator.
+7.  **Quit:** Press 'q' to quit.
 
 ## Code Structure
 
@@ -65,7 +62,7 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 ## Author
 
-[Jaya Bharath Reddy Iska]
+Jaya Bharath Reddy Iska
 
 ## License
 
