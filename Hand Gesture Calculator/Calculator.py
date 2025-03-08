@@ -6,6 +6,9 @@ import time
 
 class HandCalculator:
     def __init__(self):
+
+        self.last_delete_time = 0  # Track last delete time
+        
         # Video Capture
         self.cap = cv2.VideoCapture(0)
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
@@ -35,6 +38,7 @@ class HandCalculator:
 
         self.operator_positions = {
             "R": (50, 20, 150, 70),
+            "D": (170, 20, 270, 70),  # Delete button
             "+": (300, 50, 400, 100),
             "-": (450, 50, 550, 100),
             "*": (600, 50, 700, 100),
@@ -53,6 +57,9 @@ class HandCalculator:
         for op, (x1, y1, x2, y2) in self.operator_positions.items():
             if op == 'R':
                 cv2.rectangle(img, (x1, y1), (x2, y2), (0, 0, 255), -1)
+                cv2.putText(img, op, (x1 + 30, y1 + 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+            elif op == 'D':  # Delete Button
+                cv2.rectangle(img, (x1, y1), (x2, y2), (0, 165, 255), -1)  # Orange color
                 cv2.putText(img, op, (x1 + 30, y1 + 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
             else:
                 cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 255), -1)
@@ -159,6 +166,10 @@ class HandCalculator:
                                 self.expression = ""
                                 self.result = None
                                 self.current_display = None
+                            elif selected_operator == 'D':  
+                                if current_time - self.last_delete_time > 1:  # 1-second delay between deletions
+                                    self.expression = self.expression[:-1]  # Remove last character
+                                    self.last_delete_time = current_time  # Update last delete time
 
                     elif idx == 1:  # Right hand (largest X value)
                         detected_digit = self.count_fingers(lm_list, self.box2, left=False)
