@@ -106,5 +106,5 @@ class GestureMathAI:
 
 
 if __name__ == "__main__":
-    ai_instance = GestureMathAI(api_key="AIzaSyBGcmDihi-O69Vv2y6AqBk6dmqPVo_haeE", prompt="Guess the shape")
+    ai_instance = GestureMathAI(api_key="YOUR API KEY", prompt="Guess the shape")
     ai_instance.run()
